@@ -108,6 +108,7 @@ body {
   flex-wrap: wrap;
   gap: 16px;
   margin-top: 16px;
+  position: relative;
 }
 
 button,
@@ -130,12 +131,17 @@ button:focus-visible,
   background: linear-gradient(135deg, var(--pink-4), var(--pink-3));
   color: #fff;
   box-shadow: 0 8px 20px rgba(255, 143, 180, 0.4);
+  position: relative;
+  z-index: 3;
 }
 
 #no-btn {
   background: #fff;
   color: var(--berry);
   border: 2px solid var(--pink-3);
+  position: relative;
+  z-index: 1;
+  transition: transform 0.2s ease, opacity 0.2s ease;
 }
 
 #no-btn.shake {
