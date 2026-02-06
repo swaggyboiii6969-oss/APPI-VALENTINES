@@ -5,14 +5,17 @@ if (yesBtn && noBtn) {
   const noTexts = [
     "No",
     "Are you sure?",
+    "Really sure?",
     "Please?",
-    "Think again?",
-    "You're breaking my heart",
-    "Pretty please",
-    "Just say yes",
-    "I'll bring snacks",
-    "I'll be your bunny",
-    "Please say yes",
+    "Think again!",
+    "Last Chance D:",
+    "You're breaking my heart :(",
+    "Pretty please :3333",
+    "Don't be so cold :((",
+    "Give it another thought",
+    "Just say yes >:(",
+    "I'll agree to CBT atp",
+    "I'll cri :'(",
   ];
 
   let clickCount = 0;
