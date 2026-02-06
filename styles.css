@@ -226,11 +226,11 @@ button:focus-visible,
 }
 
 .bg-tenor.b1 { top: 6%; left: 8%; transform: rotate(-6deg); }
-.bg-tenor.b2 { top: 28%; right: 2%; transform: rotate(7deg); }
+.bg-tenor.b2 { top: calc(28% + 76px); right: 2%; transform: rotate(7deg); }
 
-.bg-tenor.k1 { top: 12%; right: 6%; transform: rotate(5deg); }
+.bg-tenor.k1 { top: calc(12% - 57px); right: 6%; transform: rotate(5deg); }
 
-.bg-tenor.d1 { top: calc(56% - 113px); left: 4%; transform: rotate(4deg); }
+.bg-tenor.d1 { top: calc(56% - 113px); left: calc(4% - 30px); transform: rotate(8deg); }
 .bg-tenor.d2 { top: 40%; right: 18%; transform: rotate(-4deg); }
 
 .center-tenor {
@@ -254,7 +254,9 @@ button:focus-visible,
 }
 
 .center-tenor.bottom {
-  bottom: 8px;
+  bottom: calc(8px + 38px);
+  left: calc(100% - 8px);
+  transform: translateX(-100%) rotate(-6deg);
 }
 
 .center-tenor .tenor-gif-embed,
