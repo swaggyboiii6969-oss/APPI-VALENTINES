@@ -301,8 +301,8 @@ button:focus-visible,
 }
 
 .gift-thumbnail {
-  width: 120px;
-  height: 120px;
+  width: 158px;
+  height: 158px;
   border-radius: 16px;
   overflow: hidden;
   background: linear-gradient(140deg, #ffe4ee, #fff);
