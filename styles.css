@@ -338,6 +338,18 @@ button:focus-visible,
   text-align: left;
 }
 
+.quiz-card.flash-correct {
+  background: #e6ffef;
+  border-color: #6bdc8b;
+  box-shadow: 0 10px 20px rgba(78, 176, 108, 0.25);
+}
+
+.quiz-card.flash-wrong {
+  background: #ffe6ea;
+  border-color: #ff7a98;
+  box-shadow: 0 10px 20px rgba(190, 70, 95, 0.25);
+}
+
 .quiz-progress {
   font-weight: 600;
   margin-bottom: 8px;

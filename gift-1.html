@@ -59,7 +59,6 @@
 
     <section class="card yes-hero">
       <h1 class="hero-title">Quiz for mi amor💗</h1>
-      <p class="hero-sub">Pick the right answer to move on.</p>
 
       <div class="quiz-card" id="quiz">
         <div class="quiz-progress" id="quiz-progress">Question 1 of 10</div>
@@ -167,6 +166,7 @@
     const questionEl = document.getElementById("quiz-question");
     const optionsEl = document.getElementById("quiz-options");
     const feedbackEl = document.getElementById("quiz-feedback");
+    const quizCard = document.getElementById("quiz");
 
     function renderQuestion() {
       const item = quizData[current];
@@ -190,18 +190,24 @@
       const isCorrect = Object.prototype.hasOwnProperty.call(item.correct, choice);
 
       if (isCorrect) {
+        quizCard.classList.remove("flash-wrong");
+        quizCard.classList.add("flash-correct");
+        setTimeout(() => quizCard.classList.remove("flash-correct"), 600);
         feedbackEl.textContent = item.correct[choice];
         current += 1;
         if (current < quizData.length) {
           setTimeout(renderQuestion, 2000);
         } else {
-          progressEl.textContent = "All done!";
+          progressEl.textContent = "";
           questionEl.textContent = "YAYYYY U DID IT MY LOVE! now pls do me soon💔imy";
           optionsEl.innerHTML = "";
         }
         return;
       }
 
+      quizCard.classList.remove("flash-correct");
+      quizCard.classList.add("flash-wrong");
+      setTimeout(() => quizCard.classList.remove("flash-wrong"), 600);
       const wrongMsg = item.wrong && Object.prototype.hasOwnProperty.call(item.wrong, choice)
         ? item.wrong[choice]
         : "Nope, try again!";
