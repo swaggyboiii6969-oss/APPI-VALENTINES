@@ -236,8 +236,8 @@ button:focus-visible,
 .center-tenor {
   position: absolute;
   left: 50%;
-  width: 133px;
-  height: 133px;
+  width: 171px;
+  height: 171px;
   transform: translateX(-50%);
   border-radius: 16px;
   overflow: hidden;
@@ -246,8 +246,13 @@ button:focus-visible,
   z-index: 1;
 }
 
-.center-tenor.top { top: 8px; }
-.center-tenor.bottom { bottom: 8px; }
+.center-tenor.top {
+  top: 8px;
+}
+
+.center-tenor.bottom {
+  bottom: 8px;
+}
 
 .center-tenor .tenor-gif-embed,
 .center-tenor .tenor-gif-embed * {
