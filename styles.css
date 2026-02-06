@@ -207,6 +207,17 @@ button:focus-visible,
 .sticker.two { bottom: 30px; right: 40px; transform: rotate(12deg); }
 .sticker.three { top: 30%; right: 8%; transform: rotate(-6deg); }
 
+.sticker.pray { background-image: url("assets/pray.jpg"); }
+.sticker.wish { background-image: url("assets/wish.jpg"); }
+
+.sticker.p1 { top: 90px; right: 18%; transform: rotate(6deg); }
+.sticker.p2 { bottom: 120px; left: 8%; transform: rotate(-8deg); }
+.sticker.p3 { top: 55%; left: 12%; transform: rotate(4deg); }
+
+.sticker.w1 { top: 12%; left: 35%; transform: rotate(-6deg); }
+.sticker.w2 { bottom: 60px; right: 14%; transform: rotate(9deg); }
+.sticker.w3 { top: 62%; right: 3%; transform: rotate(-5deg); }
+
 .hearts {
   display: flex;
   gap: 12px;
