@@ -73,7 +73,7 @@ body {
 
 .hero-title {
   font-size: clamp(2rem, 3vw + 1.2rem, 3.4rem);
-  margin: 0;
+  margin: 0 0 34px;
 }
 
 .title-row {
@@ -100,8 +100,8 @@ body {
 }
 
 .tenor-sticker.secondary {
-  width: min(140px, 30vw);
-  height: min(140px, 30vw);
+  width: 192px;
+  height: 192px;
   margin-top: 14px;
   align-self: end;
   justify-self: end;
