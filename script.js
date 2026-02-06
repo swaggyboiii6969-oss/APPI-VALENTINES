@@ -13,9 +13,9 @@ if (yesBtn && noBtn) {
     "Pretty please :3333",
     "Don't be so cold :((",
     "Give it another thought",
-    "Just say yes >:(",
+    "PLSSS say yes >:(",
     "I'll agree to CBT atp",
-    "I'll cri :'(",
+    "CMON I'll cri :'(",
   ];
 
   let clickCount = 0;
