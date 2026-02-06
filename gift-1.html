@@ -58,7 +58,7 @@
     </div>
 
     <section class="card yes-hero">
-      <h1 class="hero-title">Quiz for mi amor</h1>
+      <h1 class="hero-title">Quiz for mi amor💗</h1>
       <p class="hero-sub">Pick the right answer to move on.</p>
 
       <div class="quiz-card" id="quiz">
@@ -73,7 +73,7 @@
         <div class="quiz-feedback" id="quiz-feedback" aria-live="polite"></div>
       </div>
 
-      <a class="back-link" href="yes.html">back😭🤣</a>
+      <a class="back-link" href="yes.html">back💔🥀</a>
     </section>
 
     <div class="center-tenor bottom" aria-hidden="true">
@@ -88,16 +88,78 @@
   <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
   <script>
     const quizData = [
-      { q: "Question 1?", options: ["A", "B", "C", "D"], answer: 0 },
-      { q: "Question 2?", options: ["A", "B", "C", "D"], answer: 0 },
-      { q: "Question 3?", options: ["A", "B", "C", "D"], answer: 0 },
-      { q: "Question 4?", options: ["A", "B", "C", "D"], answer: 0 },
-      { q: "Question 5?", options: ["A", "B", "C", "D"], answer: 0 },
-      { q: "Question 6?", options: ["A", "B", "C", "D"], answer: 0 },
-      { q: "Question 7?", options: ["A", "B", "C", "D"], answer: 0 },
-      { q: "Question 8?", options: ["A", "B", "C", "D"], answer: 0 },
-      { q: "Question 9?", options: ["A", "B", "C", "D"], answer: 0 },
-      { q: "Question 10?", options: ["A", "B", "C", "D"], answer: 0 }
+      {
+        q: "Who is my booboobear pookie cutie patootie with frosted whipped cream sprinkles and cherry on top? :3",
+        options: ["YOUUUU", "ur ass", "ur mom", "Dr Sarvapalli Radhakrishnan"],
+        correct: {
+          0: "YAYYYY MWAH I LOVE YOUUU (dont say ew cringe >:( )"
+        },
+        wrong: {
+          1: "sowwy :3",
+          2: "i'm not jyotsna mishra dawg, i dont say ye sab buri buri baatein",
+          3: "he kinda bad🫦 tho but i'll pass (i want u soooo bad)"
+        }
+      },
+      {
+        q: "Who is on time and has the hottest valentine this year?",
+        options: ["ME ME EM EME EM M ME", "no one", "ur the hottest and ur mine so no one", "lets makeout whaa sorry i got distracted"],
+        correct: {
+          0: "OH MY GOD YES UR MINE THANK U POLS!!!"
+        },
+        wrong: {
+          1: "its right but mera naam lo accha lagta hai :3",
+          2: "meow i miss u so much",
+          3: "did u know the liver is the only human organ that can fully regnerate itself"
+        }
+      },
+      {
+        q: "Who is the absolute boss in our relationship?",
+        options: ["me ow :3 (me)", "obv you ^v^", "my dad", "akshay kumar"],
+        correct: {
+          1: "OMG YES! YOU'RE SO SMART AND SEXY WOWIEEE"
+        },
+        wrong: {
+          0: "bhau bhau",
+          2: "lowk w how he controls us making out or not in knp",
+          3: "hai hukum ka ikka boss"
+        }
+      },
+      {
+        q: "Who initiates more fights in our relationship?",
+        options: ["always you", "no one", "ye dooriyan", "me"],
+        correct: {
+          3: "im sorry for all those times :("
+        },
+        wrong: {
+          0: "WTH never hottie :3, i love u soo much MWAH",
+          1: "fr bhai sab modi ki galti hai aur do more dihh ko vote",
+          2: "💔💔💔💔💔"
+        }
+      },
+      {
+        q: "WHERE WILL I BE MARCH 19TH AND POORIFY VALENTINES KI KASAR?",
+        options: ["in the flight", "in ur heart", "in ur arms", "in ur pants"],
+        correct: {
+          2: "I WILLLL BEEEEEEE :3333333 fevikwiked to u",
+          3: "whaa mustve been the wind, no fr tho i wanna be there, vote for wind they so right, abki baar hawa ki sarkar"
+        },
+        wrong: {
+          0: "hadd hoti hai 3 acche answer diye usmein bhi hag diya",
+          1: "woh toh hamesha hi :3, uss din specifically tell na :3"
+        }
+      },
+      {
+        q: "What do u wanna do valentines ki e-date pe? :3",
+        options: ["sambhog", "aap yaha aa jaaye", "CBT", "movie, games and stuff idk u decide meow :3"],
+        correct: {
+          3: "MERA BABU LOVE UUUUU💖"
+        },
+        wrong: {
+          0: "horny jail 💔",
+          1: "i wish dawg",
+          2: "pls pls pls mujhe mat maaro *insert ritesh deshmukh meme*"
+        }
+      }
     ];
 
     let current = 0;
@@ -125,19 +187,25 @@
 
     function handleAnswer(choice) {
       const item = quizData[current];
-      if (choice === item.answer) {
-        feedbackEl.textContent = "Correct! 💗";
+      const isCorrect = Object.prototype.hasOwnProperty.call(item.correct, choice);
+
+      if (isCorrect) {
+        feedbackEl.textContent = item.correct[choice];
         current += 1;
         if (current < quizData.length) {
-          setTimeout(renderQuestion, 600);
+          setTimeout(renderQuestion, 2000);
         } else {
           progressEl.textContent = "All done!";
-          questionEl.textContent = "You did it, my love!";
+          questionEl.textContent = "YAYYYY U DID IT MY LOVE! now pls do me soon💔imy";
           optionsEl.innerHTML = "";
         }
-      } else {
-        feedbackEl.textContent = "Nope, try again!";
+        return;
       }
+
+      const wrongMsg = item.wrong && Object.prototype.hasOwnProperty.call(item.wrong, choice)
+        ? item.wrong[choice]
+        : "Nope, try again!";
+      feedbackEl.textContent = wrongMsg;
     }
 
     renderQuestion();
