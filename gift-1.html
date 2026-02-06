@@ -8,11 +8,139 @@
 </head>
 <body>
   <main class="page">
+    <div class="stickers" aria-hidden="true">
+      <span class="sticker one"></span>
+      <span class="sticker two"></span>
+      <span class="sticker three"></span>
+      <div class="bg-tenor bears b1">
+        <div class="tenor-gif-embed"
+             data-postid="18384155385965587859"
+             data-share-method="host"
+             data-aspect-ratio="0.88"
+             data-width="100%"></div>
+      </div>
+      <div class="bg-tenor bears b2">
+        <div class="tenor-gif-embed"
+             data-postid="18384155385965587859"
+             data-share-method="host"
+             data-aspect-ratio="0.88"
+             data-width="100%"></div>
+      </div>
+      <div class="bg-tenor kitty k1">
+        <div class="tenor-gif-embed"
+             data-postid="1924504638945055259"
+             data-share-method="host"
+             data-aspect-ratio="1.23333"
+             data-width="100%"></div>
+      </div>
+      <div class="bg-tenor dog d1">
+        <div class="tenor-gif-embed"
+             data-postid="4519505620284859496"
+             data-share-method="host"
+             data-aspect-ratio="1"
+             data-width="100%"></div>
+      </div>
+      <div class="bg-tenor dog d2">
+        <div class="tenor-gif-embed"
+             data-postid="4519505620284859496"
+             data-share-method="host"
+             data-aspect-ratio="1"
+             data-width="100%"></div>
+      </div>
+    </div>
+
+    <div class="center-tenor top" aria-hidden="true">
+      <div class="tenor-gif-embed"
+           data-postid="14240139012987165478"
+           data-share-method="host"
+           data-aspect-ratio="1.14583"
+           data-width="100%"></div>
+    </div>
+
     <section class="card yes-hero">
-      <h1 class="hero-title">Gift 1</h1>
-      <p class="hero-sub">Your first cute photo goes here.</p>
-      <a class="back-link" href="yes.html">Back to gifts</a>
+      <h1 class="hero-title">Quiz for mi amor</h1>
+      <p class="hero-sub">Pick the right answer to move on.</p>
+
+      <div class="quiz-card" id="quiz">
+        <div class="quiz-progress" id="quiz-progress">Question 1 of 10</div>
+        <h2 class="quiz-question" id="quiz-question">Question goes here?</h2>
+        <div class="quiz-options" id="quiz-options">
+          <button class="quiz-option" type="button">Option A</button>
+          <button class="quiz-option" type="button">Option B</button>
+          <button class="quiz-option" type="button">Option C</button>
+          <button class="quiz-option" type="button">Option D</button>
+        </div>
+        <div class="quiz-feedback" id="quiz-feedback" aria-live="polite"></div>
+      </div>
+
+      <a class="back-link" href="yes.html">back😭🤣</a>
     </section>
+
+    <div class="center-tenor bottom" aria-hidden="true">
+      <div class="tenor-gif-embed"
+           data-postid="25920184"
+           data-share-method="host"
+           data-aspect-ratio="1.15108"
+           data-width="100%"></div>
+    </div>
   </main>
+
+  <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+  <script>
+    const quizData = [
+      { q: "Question 1?", options: ["A", "B", "C", "D"], answer: 0 },
+      { q: "Question 2?", options: ["A", "B", "C", "D"], answer: 0 },
+      { q: "Question 3?", options: ["A", "B", "C", "D"], answer: 0 },
+      { q: "Question 4?", options: ["A", "B", "C", "D"], answer: 0 },
+      { q: "Question 5?", options: ["A", "B", "C", "D"], answer: 0 },
+      { q: "Question 6?", options: ["A", "B", "C", "D"], answer: 0 },
+      { q: "Question 7?", options: ["A", "B", "C", "D"], answer: 0 },
+      { q: "Question 8?", options: ["A", "B", "C", "D"], answer: 0 },
+      { q: "Question 9?", options: ["A", "B", "C", "D"], answer: 0 },
+      { q: "Question 10?", options: ["A", "B", "C", "D"], answer: 0 }
+    ];
+
+    let current = 0;
+    const progressEl = document.getElementById("quiz-progress");
+    const questionEl = document.getElementById("quiz-question");
+    const optionsEl = document.getElementById("quiz-options");
+    const feedbackEl = document.getElementById("quiz-feedback");
+
+    function renderQuestion() {
+      const item = quizData[current];
+      progressEl.textContent = `Question ${current + 1} of ${quizData.length}`;
+      questionEl.textContent = item.q;
+      optionsEl.innerHTML = "";
+      feedbackEl.textContent = "";
+
+      item.options.forEach((opt, idx) => {
+        const btn = document.createElement("button");
+        btn.type = "button";
+        btn.className = "quiz-option";
+        btn.textContent = opt;
+        btn.addEventListener("click", () => handleAnswer(idx));
+        optionsEl.appendChild(btn);
+      });
+    }
+
+    function handleAnswer(choice) {
+      const item = quizData[current];
+      if (choice === item.answer) {
+        feedbackEl.textContent = "Correct! 💗";
+        current += 1;
+        if (current < quizData.length) {
+          setTimeout(renderQuestion, 600);
+        } else {
+          progressEl.textContent = "All done!";
+          questionEl.textContent = "You did it, my love!";
+          optionsEl.innerHTML = "";
+        }
+      } else {
+        feedbackEl.textContent = "Nope, try again!";
+      }
+    }
+
+    renderQuestion();
+  </script>
 </body>
 </html>

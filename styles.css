@@ -327,6 +327,53 @@ button:focus-visible,
   font-weight: 600;
 }
 
+.quiz-card {
+  margin: 24px auto 0;
+  padding: 20px;
+  max-width: 520px;
+  border-radius: 20px;
+  background: #fff;
+  border: 2px solid var(--pink-2);
+  box-shadow: 0 10px 20px rgba(123, 42, 68, 0.08);
+  text-align: left;
+}
+
+.quiz-progress {
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.quiz-question {
+  font-size: 1.2rem;
+  margin: 0 0 14px;
+}
+
+.quiz-options {
+  display: grid;
+  gap: 10px;
+}
+
+.quiz-option {
+  border: 2px solid var(--pink-3);
+  background: #fff;
+  color: var(--berry);
+  padding: 10px 14px;
+  border-radius: 12px;
+  font-weight: 600;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.quiz-option:hover {
+  transform: translateY(-2px);
+  background: var(--pink-1);
+}
+
+.quiz-feedback {
+  margin-top: 12px;
+  min-height: 24px;
+  font-weight: 600;
+}
+
 @media (min-width: 800px) {
   .hero {
     grid-template-columns: 1fr 1fr;
