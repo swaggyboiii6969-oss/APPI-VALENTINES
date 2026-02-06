@@ -207,16 +207,32 @@ button:focus-visible,
 .sticker.two { bottom: 30px; right: 40px; transform: rotate(12deg); }
 .sticker.three { top: 30%; right: 8%; transform: rotate(-6deg); }
 
-.sticker.pray { background-image: url("assets/pray.jpg"); }
-.sticker.wish { background-image: url("assets/wish.jpg"); }
+.bg-tenor {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 22px rgba(123, 42, 68, 0.12);
+  opacity: 0.9;
+  pointer-events: none;
+}
 
-.sticker.p1 { top: 90px; right: 18%; transform: rotate(6deg); }
-.sticker.p2 { bottom: 120px; left: 8%; transform: rotate(-8deg); }
-.sticker.p3 { top: 55%; left: 12%; transform: rotate(4deg); }
+.bg-tenor .tenor-gif-embed,
+.bg-tenor .tenor-gif-embed * {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
 
-.sticker.w1 { top: 12%; left: 35%; transform: rotate(-6deg); }
-.sticker.w2 { bottom: 60px; right: 14%; transform: rotate(9deg); }
-.sticker.w3 { top: 62%; right: 3%; transform: rotate(-5deg); }
+.bg-tenor.b1 { top: 6%; left: 8%; transform: rotate(-6deg); }
+.bg-tenor.b2 { bottom: 10%; right: 10%; transform: rotate(7deg); }
+
+.bg-tenor.k1 { top: 22%; right: 6%; transform: rotate(5deg); }
+.bg-tenor.k2 { bottom: 18%; left: 16%; transform: rotate(-5deg); }
+
+.bg-tenor.d1 { top: 56%; left: 4%; transform: rotate(4deg); }
+.bg-tenor.d2 { top: 40%; right: 18%; transform: rotate(-4deg); }
 
 .hearts {
   display: flex;
