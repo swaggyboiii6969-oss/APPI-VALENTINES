@@ -25,13 +25,6 @@ if (yesBtn && noBtn) {
     const scale = 1 + clickCount * 0.18;
     yesBtn.style.transform = `scale(${scale})`;
 
-    const noOpacity = Math.max(0, 1 - clickCount * 0.18);
-    noBtn.style.opacity = String(noOpacity);
-    noBtn.style.transform = `scale(${Math.max(0.7, 1 - clickCount * 0.08)})`;
-    if (noOpacity <= 0.1) {
-      noBtn.style.pointerEvents = "none";
-    }
-
     noBtn.classList.remove("shake");
     void noBtn.offsetWidth;
     noBtn.classList.add("shake");
