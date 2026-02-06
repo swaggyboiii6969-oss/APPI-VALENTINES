@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Will You Be My Valentine?</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="page">
+    <div class="stickers" aria-hidden="true">
+      <span class="sticker one"></span>
+      <span class="sticker two"></span>
+      <span class="sticker three"></span>
+    </div>
+
+    <section class="card hero">
+      <div>
+        <p class="hearts">💗 💗 💗</p>
+        <h1 class="hero-title">Will you be my Valentine?</h1>
+        <p class="hero-sub">I made this just for you, with extra bunny stickers and extra love.</p>
+
+        <div class="button-row">
+          <button id="yes-btn" onclick="window.location.href='yes.html'">Yes</button>
+          <button id="no-btn">No</button>
+        </div>
+      </div>
+
+      <div class="photo-frame">
+        <img src="assets/your-photo.jpg" alt="A photo of me asking you to be my Valentine" onerror="this.style.display='none'; this.parentElement.textContent='Add your favorite photo here (assets/your-photo.jpg)';" />
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
