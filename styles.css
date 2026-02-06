@@ -352,7 +352,7 @@ button:focus-visible,
 .parchment-text {
   margin: 0;
   font-family: "Brush Script MT", "Lucida Handwriting", "Segoe Script", cursive;
-  font-size: 1.15rem;
+  font-size: calc(1.15rem + 3px);
   line-height: 1.7;
   color: #6a3b2a;
 }
