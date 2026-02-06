@@ -416,6 +416,50 @@ button:focus-visible,
   font-weight: 600;
 }
 
+.polaroid-grid {
+  margin: 18px auto 0;
+  display: grid;
+  gap: 18px;
+  grid-template-columns: repeat(3, minmax(160px, 1fr));
+}
+
+.polaroid {
+  background: #fff;
+  border-radius: 14px;
+  padding: 12px 12px 18px;
+  box-shadow: 0 10px 20px rgba(123, 42, 68, 0.14);
+  border: 1px solid rgba(123, 42, 68, 0.1);
+  display: grid;
+  gap: 10px;
+}
+
+.polaroid-photo {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  border-radius: 10px;
+  object-fit: cover;
+  display: block;
+  background: repeating-linear-gradient(45deg, #ffe4ee, #ffe4ee 10px, #fff 10px, #fff 20px);
+}
+
+.polaroid figcaption {
+  font-family: "Brush Script MT", "Lucida Handwriting", "Segoe Script", cursive;
+  font-size: 1rem;
+  color: #6a3b2a;
+}
+
+@media (max-width: 800px) {
+  .polaroid-grid {
+    grid-template-columns: repeat(2, minmax(150px, 1fr));
+  }
+}
+
+@media (max-width: 520px) {
+  .polaroid-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 @media (min-width: 800px) {
   .hero {
     grid-template-columns: 1fr 1fr;
