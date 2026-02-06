@@ -248,14 +248,14 @@ button:focus-visible,
 
 .center-tenor.top {
   bottom: 18px;
-  left: 8%;
+  left: calc(8% - 38px);
   top: auto;
-  transform: none;
+  transform: rotate(5deg);
 }
 
 .center-tenor.bottom {
-  bottom: calc(8px + 38px);
-  left: calc(100% - 8px);
+  bottom: calc(8px + 38px + 57px);
+  left: calc(100% - 8px - 38px);
   transform: translateX(-100%) rotate(-6deg);
 }
 
