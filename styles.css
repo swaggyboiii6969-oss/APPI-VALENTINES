@@ -327,6 +327,36 @@ button:focus-visible,
   font-weight: 600;
 }
 
+.parchment {
+  margin: 18px auto 0;
+  max-width: 620px;
+  background: linear-gradient(180deg, #fff4d6 0%, #f7e6b7 100%);
+  border-radius: 18px;
+  padding: 26px 28px;
+  box-shadow: 0 12px 26px rgba(123, 42, 68, 0.18);
+  border: 2px solid rgba(123, 42, 68, 0.15);
+  position: relative;
+  text-align: left;
+}
+
+.parchment::before,
+.parchment::after {
+  content: "";
+  position: absolute;
+  inset: 10px;
+  border: 1px dashed rgba(123, 42, 68, 0.2);
+  border-radius: 14px;
+  pointer-events: none;
+}
+
+.parchment-text {
+  margin: 0;
+  font-family: "Brush Script MT", "Lucida Handwriting", "Segoe Script", cursive;
+  font-size: 1.15rem;
+  line-height: 1.7;
+  color: #6a3b2a;
+}
+
 .quiz-card {
   margin: 24px auto 0;
   padding: 20px;
