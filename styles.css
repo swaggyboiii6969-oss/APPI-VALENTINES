@@ -75,7 +75,7 @@ body {
 
 .hero-title {
   font-size: clamp(2rem, 3vw + 1.2rem, 3.4rem);
-  margin: 0 0 8px;
+  margin: 0;
 }
 
 .title-row {
@@ -99,8 +99,8 @@ body {
 }
 
 .mini-sticker {
-  width: min(var(--sticker-sm), 28vw);
-  height: min(var(--sticker-sm), 28vw);
+  width: min(120px, 24vw);
+  height: min(120px, 24vw);
   object-fit: cover;
   border-radius: 14px;
   box-shadow: 0 6px 14px rgba(123, 42, 68, 0.12);
